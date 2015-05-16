@@ -1,0 +1,45 @@
+@* userSignupCountDown Template File *@
+@(phnos: (Option[String], String))(implicit request: RequestHeader)
+@main("Call"){
+	<legend>Missed Call Panel</legend>
+	<center>
+		
+		<div class="alert alert-success">
+			@phnos._1 match{
+				case Some(number) => {
+					<h1>Call @number</h1>	
+				}
+				case None => {
+					<h1>Serious error ocurred. try to reload !!!</h1>	
+				}
+			}
+			
+		</div>
+		
+		<div class="alert alert-success">
+			<h1 id="start"></h1>
+		</div>
+		
+	</center>
+	<script type="text/javascript">
+	
+		$(document).ready(function() {
+			var count = 120;
+		   	setTimeout(function() { count = 0; window.location = "@routes.Auth.userSignupRedirect()"; },  60 * 2 * 1000);
+		   		window.setInterval(function(){
+			   		count = count - 1;
+			   		$("#start").text(count)
+			   		if(count <= 0) {$("#start").text("Refresh to try again"); return;}
+			   	}, 1000)
+				var ws = new WebSocket("@routes.Application.callTrigger(phnos._2).webSocketURL()")	
+	    		ws.onmessage = function(msg){
+	    			window.location = "@routes.Auth.userSignupRedirect()";
+	    		}
+			});
+
+		
+	   
+		
+	</script>
+}
+

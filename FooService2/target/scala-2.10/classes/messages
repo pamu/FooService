@@ -1,0 +1,3 @@
+error.authfail = email or password is wrong.
+error.login = Oh crap !!!. Some Other is trying to login with same email as yours.
+error.exists = Email already taken.

@@ -1,0 +1,31 @@
+@* addDevice Template File *@
+@(addDeviceForm: Form[AddDeviceFormData])(implicit flash: play.api.mvc.Flash)
+
+@import helper._
+@import helper.twitterBootstrap._
+@import play.api.i18n.Messages
+
+@main("Add Device"){
+	<fieldset>
+		<legend>Add Device. <a href="/removeDevice">Remove Device</a></legend>
+		@flash.get("addSuccess").map{ _ =>
+			<div class="alert alert-success">Device Added Successfully. Add Another.</div>
+		}
+		@form(action = routes.Application.addDevicePost()){
+			@inputText(
+				addDeviceForm("simId"),
+				'_label -> "SIM ID",
+				'_showConstraints -> false
+			)
+			@inputText(
+				addDeviceForm("phoneNumber"),
+				'_label -> "PHONE NUMBER",
+				'_showConstraints -> false
+			)
+			<button class="btn btn-primary">Add Device</button>
+		}
+	</fieldset>
+	@addDeviceForm.globalErrors.map{ error =>
+		<div class="alert alert-error">@Messages(error.message)</div>
+	}
+}

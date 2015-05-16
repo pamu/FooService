@@ -1,0 +1,129 @@
+2014-07-01 16:31:56,061 - [INFO] - from play in pool-4-thread-2 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-07-01 16:32:11,604 - [INFO] - from application in play-internal-execution-context-1 
+application started
+
+2014-07-01 16:32:11,611 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-07-01 16:32:11,873 - [INFO] - from play in New I/O worker #1 
+Starting application default Akka system.
+
+2014-07-01 16:32:12,980 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+join request in call events actor
+
+2014-07-01 16:32:25,947 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+missed call manager websocket
+
+2014-07-01 16:32:26,100 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+call message in call events actor
+
+2014-07-01 16:32:26,108 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+got a missed call from 89014103211118510720 phno 0101
+
+2014-07-01 16:32:26,108 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+MissedCallData(89014103211118510720,0101) in call events actor
+
+2014-07-01 16:32:26,232 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+call from user logged 0101
+
+2014-07-01 16:32:26,235 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+in call trigger actor call from 0101
+
+2014-07-01 16:32:26,236 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+send message in call trigger actor
+
+2014-07-01 16:32:26,237 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+0101 added to clients list
+
+2014-07-01 16:32:31,428 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+channel closed
+
+2014-07-01 16:32:31,484 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+join request in call events actor
+
+2014-07-01 16:32:46,516 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+call message in call events actor
+
+2014-07-01 16:32:46,516 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+got a missed call from 89014103211118510720 phno 10101
+
+2014-07-01 16:32:46,516 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+MissedCallData(89014103211118510720,10101) in call events actor
+
+2014-07-01 16:32:46,601 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+call from user logged 10101
+
+2014-07-01 16:32:46,602 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+in call trigger actor call from 10101
+
+2014-07-01 16:32:46,602 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+send message in call trigger actor
+
+2014-07-01 16:32:46,602 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+10101 added to clients list
+
+2014-07-01 16:32:50,410 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
+channel closed
+
+2014-07-01 16:32:50,484 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+join request in call events actor
+
+2014-07-01 16:32:54,285 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+call message in call events actor
+
+2014-07-01 16:32:54,285 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+got a missed call from 89014103211118510720 phno 10101
+
+2014-07-01 16:32:54,286 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+MissedCallData(89014103211118510720,10101) in call events actor
+
+2014-07-01 16:32:54,370 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+call from user logged 10101
+
+2014-07-01 16:32:54,370 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+in call trigger actor call from 10101
+
+2014-07-01 16:32:56,462 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+channel closed
+
+2014-07-01 16:32:56,529 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+join request in call events actor
+
+2014-07-01 16:33:00,825 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+call message in call events actor
+
+2014-07-01 16:33:00,825 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
+got a missed call from 89014103211118510720 phno 10101011
+
+2014-07-01 16:33:00,825 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+MissedCallData(89014103211118510720,10101011) in call events actor
+
+2014-07-01 16:33:00,907 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
+call from user logged 10101011
+
+2014-07-01 16:33:00,908 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+in call trigger actor call from 10101011
+
+2014-07-01 16:33:00,908 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+send message in call trigger actor
+
+2014-07-01 16:33:00,908 - [INFO] - from application in application-akka.actor.default-dispatcher-2 
+10101011 added to clients list
+
+2014-07-01 16:37:31,169 - [INFO] - from application in play-internal-execution-context-2 
+application stopped
+
+2014-07-01 16:37:31,170 - [INFO] - from play in play-internal-execution-context-2 
+Shutdown application default Akka system.
+
+2014-07-01 16:37:31,316 - [INFO] - from application in play-internal-execution-context-2 
+application started
+
+2014-07-01 16:37:31,317 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2014-07-01 16:42:33,953 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+channel closed
+

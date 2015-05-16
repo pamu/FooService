@@ -1,0 +1,27 @@
+@* adminLogin Template File *@
+@(adminForm: Form[AdminFormData])
+@import helper._
+@import helper.twitterBootstrap._
+@import play.api.i18n.Messages
+
+@main("Admin"){
+	<fieldset>
+		<legend>Admin Login</legend>
+			@form(action = routes.Auth.adminLoginPost()){
+				@inputText(
+					adminForm("email"),
+					'_label -> "Email",
+					'_showConstraints -> false
+				)
+				@inputPassword(
+					adminForm("password"),
+					'_label -> "Password",
+					'_showConstraints -> false
+				)
+			<button class="btn btn-primary">Proceed</button>
+			}
+	</fieldset>
+	@adminForm.globalErrors.map{ error =>
+		<div class="alert alert-error">@Messages(error.message)</div>
+	}
+}

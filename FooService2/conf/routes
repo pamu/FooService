@@ -1,0 +1,32 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /                           controllers.Application.index()
+GET     /foo                        controllers.Application.foo()
+GET     /admin                      controllers.Auth.adminLogin()
+GET     /user                       controllers.Auth.userLogin()
+POST    /userLoginPost              controllers.Auth.userLoginPost()
+POST    /adminLoginPost             controllers.Auth.adminLoginPost()
+GET     /addDevice                  controllers.Application.addDevice()
+POST    /addDevicePost              controllers.Application.addDevicePost()
+GET     /removeDevice               controllers.Application.removeDevice()
+POST    /removeDevicePost           controllers.Application.removeDevicePost()
+GET     /adminLogout                controllers.Application.adminLogout()
+GET     /adminHome                  controllers.Application.adminHome()
+POST    /register                   controllers.Application.registerApp()
+POST    /unregister                 controllers.Application.unregisterApp()
+GET     /userCountDown              controllers.Application.userCountDown()
+GET     /redirect                   controllers.Application.redirect()
+GET     /userLogout                 controllers.Application.userLogout()
+GET     /userHome                   controllers.Application.userHome()
+GET     /events                     controllers.Application.events()
+GET     /callTrigger/:phno          controllers.Application.callTrigger(phno)
+GET     /userSignup                 controllers.Auth.userSignup()
+POST    /userSignupPost             controllers.Auth.userSignupPost()
+GET     /userSignupCountDown        controllers.Auth.userSignupCountDown()
+GET     /userSignupRedirect         controllers.Auth.userSignupRedirect()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /webjars/*file              controllers.WebJarAssets.at(file)

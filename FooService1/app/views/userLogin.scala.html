@@ -1,0 +1,27 @@
+@* userLogin Template File *@
+@(userForm: Form[UserFormData])(implicit flash: play.api.mvc.Flash)
+@import helper._
+@import helper.twitterBootstrap._
+@import play.api.i18n.Messages
+
+@main("User"){
+	<fieldset>
+		<legend>User Login</legend>
+		@flash.get("success").map{ msg =>
+			<div class="alert alert-success">@msg</div>
+		}
+			@form(action=routes.Auth.userLoginPost()){
+				@inputText(
+					userForm("email"),
+					'_label -> "Email",
+					'_help -> "enter valid email address",
+					'_error -> "Enter the valid email",
+					'_showConstraints -> false
+				)
+			<button class="btn btn-primary">Proceed</button>
+			}
+	</fieldset>	
+	@userForm.globalErrors.map{ error =>
+		<div class="alert alert-error">@Messages(error.message)</div>
+	}
+}

@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/nagarjuna/FooService/conf/application.conf,/home/nagarjuna/FooService/target/scala-2.10/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/nagarjuna/FooService/conf/routes,/home/nagarjuna/FooService/target/scala-2.10/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/nagarjuna/FooService/conf/messages,/home/nagarjuna/FooService/target/scala-2.10/classes/messages)[0m

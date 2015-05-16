@@ -1,0 +1,35 @@
+@* userSignup Template File *@
+@(userSignupForm: Form[(String, String)])(implicit flash: play.api.mvc.Flash)
+
+@import helper._
+@import helper.twitterBootstrap._
+@import play.api.i18n.Messages
+
+@main("User Signup Form"){
+	<fieldset>
+		<legend>User Signup</legend>
+		@flash.get("success").map{ msg =>
+			<div class="alert alert-success">@msg</div>
+		}
+		@form(action=routes.Auth.userSignupPost()){
+				@inputText(
+					userSignupForm("email"),
+					'_label -> "Email",
+					'_help -> "Choose valid email address",
+					'_error -> "Enter the valid email",
+					'_showConstraints -> false
+				)
+				@inputText(
+					userSignupForm("phno"),
+					'_label -> "Phone Number",
+					'_help -> "+91 will be added",
+					'_error -> "Enter the valid Phone Number",
+					'_showConstraints -> false
+				)
+			<button class="btn btn-primary">Proceed</button>
+		}
+	</fieldset>
+	@userSignupForm.globalErrors.map{ error =>
+		<div class="alert alert-error">@Messages(error.message)</div>
+	}
+}

@@ -1,0 +1,27 @@
+@* removeDevice Template File *@
+@(removeDeviceForm: Form[RemoveDeviceFormData])(implicit flash: play.api.mvc.Flash)
+
+@import helper._
+@import helper.twitterBootstrap._
+@import play.api.i18n.Messages
+
+@main("Remove Device"){
+	<fieldset>
+		<legend>Remove Device. <a href="/addDevice">Add Device</a></legend>
+		@flash.get("removeSuccess").map{ _ =>
+			<div class="alert alert-success">Device Removed Successfully. Remove Another.</div>
+		}
+		@form(action=routes.Application.removeDevicePost()){
+			@inputText(
+				removeDeviceForm("phoneNumber"),
+				'_label -> "Enter Phone Number",
+				'_error -> "Enter valid phone number",
+				'_showConstraints -> false
+			)
+			<button class="btn btn-primary">Remove Device</button>
+		}
+	</fieldset>
+	@removeDeviceForm.globalErrors.map{ error =>
+		<div class="alert alert-error">@Messages(error.message)</div>
+	}
+}

@@ -1,0 +1,24 @@
+@* adminHome Template File *@
+@()(implicit request: RequestHeader)
+@main("Admin Home"){
+	<div class="well">
+		<h1>Admin Home</h1>
+		<div class="alert alert-success">
+			<h3><a href="/addDevice">Add Device</a></h3>
+			<h3><a href="/removeDevice">Remove Device</a></h3>
+		</div>	
+	</div>
+	<div class="alert alert-success">
+		<div id="messages"></div>
+	</div>
+	
+	<script type="text/javascript">
+		$(function(){
+			var ws = new WebSocket("@routes.Application.events().webSocketURL()");
+			ws.onmessage = function(msg){
+				$('<h4 />').text(msg.data).appendTo('#messages');
+			}
+		}
+		)
+	</script>
+}
